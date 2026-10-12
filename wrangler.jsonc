@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Le nom doit être identique à celui du Worker créé dans Cloudflare.
+  "name": "atao-accueil",
+  "compatibility_date": "2026-10-12",
+  "assets": { "directory": "./public" },
+  // Rattache atao.dev (domaine racine) à ce Worker au déploiement.
+  "routes": [{ "pattern": "atao.dev", "custom_domain": true }]
+}

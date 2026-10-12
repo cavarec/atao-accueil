@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>atao — petits outils pratiques</title>
+    <meta name="description" content="Des petites applications gratuites, simples et sans compte obligatoire : doser sa lessive, compter les points d'un jeu de société." />
+    <meta property="og:title" content="atao — petits outils pratiques" />
+    <meta property="og:description" content="Des petites applications gratuites, simples et sans compte obligatoire." />
+    <meta property="og:url" content="https://atao.dev/" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1EA39C" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231EA39C'/%3E%3Cpath d='M20 44 32 18l12 26M25 36h14' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        --bg: #f4f1e8;
+        --card: #ffffff;
+        --ink: #1d2b2a;
+        --ink-soft: #566663;
+        --line: #e1dccd;
+        --accent: #1ea39c;
+        --accent-ink: #0b6b66;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #121a19;
+          --card: #1b2625;
+          --ink: #eaf2f1;
+          --ink-soft: #9db1ae;
+          --line: #2b3a38;
+          --accent: #3cc4bc;
+          --accent-ink: #7ee0da;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      main { max-width: 760px; margin: 0 auto; padding: 56px 20px 40px; }
+      h1 { font-size: clamp(2.4rem, 8vw, 3.6rem); letter-spacing: -0.03em; line-height: 1; margin: 0 0 14px; }
+      h1 span { color: var(--accent); }
+      .lead { color: var(--ink-soft); font-size: 1.15rem; max-width: 34em; margin: 0 0 40px; }
+      .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+      .card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+        transition: transform .15s ease, border-color .15s ease;
+      }
+      .card:hover, .card:focus-visible { transform: translateY(-2px); border-color: var(--accent); outline: none; }
+      .emoji { font-size: 2rem; line-height: 1; display: block; margin-bottom: 14px; }
+      .card h2 { margin: 0 0 6px; font-size: 1.25rem; }
+      .card p { margin: 0 0 14px; color: var(--ink-soft); font-size: 0.98rem; }
+      .go { color: var(--accent-ink); font-weight: 600; font-size: 0.95rem; }
+      footer { margin-top: 48px; color: var(--ink-soft); font-size: 0.9rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>atao<span>.</span></h1>
+      <p class="lead">Des petites applications gratuites, simples, qui marchent sur le téléphone et sans pub.</p>
+
+      <div class="grid">
+        <a class="card" href="https://justedose.atao.dev">
+          <span class="emoji" aria-hidden="true">🧺</span>
+          <h2>JusteDose</h2>
+          <p>La bonne dose de lessive selon la dureté de votre eau, votre machine et votre linge. Moins de produit, plus d'économies.</p>
+          <span class="go">Ouvrir l'application →</span>
+        </a>
+        <a class="card" href="https://boardscore.atao.dev">
+          <span class="emoji" aria-hidden="true">🎲</span>
+          <h2>BoardScore</h2>
+          <p>Le compteur de points de vos jeux de société : trouvez le jeu, saisissez les scores, le classement se calcule tout seul.</p>
+          <span class="go">Ouvrir l'application →</span>
+        </a>
+      </div>
+
+      <footer>Les applications s'installent sur l'écran d'accueil du téléphone, sans passer par un magasin d'applications.</footer>
+    </main>
+  </body>
+</html>
